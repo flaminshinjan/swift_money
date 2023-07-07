@@ -20,24 +20,6 @@ class OnboardingPage1 extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
           ),
         ),
-        Positioned(
-            child: Column(
-          children: [
-            const Text('Onboarding Page 1'),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/gmail');
-              },
-              child: const Text('Gmail'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/otp');
-              },
-              child: const Text('OTP'),
-            ),
-          ],
-        ))
       ],
     ));
   }

@@ -24,10 +24,10 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: Stack(children: [
         Positioned(
-          top: -12,
-          bottom: -12,
-          left: -15,
-          right: -15,
+          top: -5,
+          bottom: -5,
+          left: -5,
+          right: -5,
           child: SvgPicture.asset(
             "assets/bgd.svg",
             height: MediaQuery.of(context).size.height,

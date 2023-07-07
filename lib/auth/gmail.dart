@@ -6,9 +6,6 @@ class GmailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Gmail'),
-      ),
       body: Column(
         children: [
           const Text('Gmail'),

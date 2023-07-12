@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/auth/gmail.dart';
 import 'package:swift_money/auth/otp.dart';
-import 'package:swift_money/initialpages/onbp1.dart';
+import 'package:swift_money/initialpages/onbp.dart';
 import 'package:swift_money/initialpages/splash.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => SplashScreen(),
         '/gmail': (context) => GmailPage(),
         '/otp': (context) => OtpPage(),
-        '/onbp1': (context) => OnboardingPage1(),
+        '/onbp': (context) => OnboardingPage1(),
       },
     );
   }

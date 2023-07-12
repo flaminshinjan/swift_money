@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:swift_money/initialpages/email.dart';
+import 'package:swift_money/initialpages/dob.dart';
 
-class OtpPage extends StatefulWidget {
-  const OtpPage({super.key});
+class LNPage extends StatefulWidget {
+  const LNPage({super.key});
 
   @override
-  State<OtpPage> createState() => _OtpPageState();
+  State<LNPage> createState() => _LNPageState();
 }
 
-class _OtpPageState extends State<OtpPage> {
+class _LNPageState extends State<LNPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,12 +33,12 @@ class _OtpPageState extends State<OtpPage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Enter the OTP number',
+                    Text('Enter your       Last Name',
                         style: TextStyle(
                             fontSize: 36,
                             fontWeight: FontWeight.bold,
                             color: Colors.black)),
-                    Text('Verification code has been sent',
+                    Text('Your last name',
                         style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.w200,
@@ -49,7 +49,7 @@ class _OtpPageState extends State<OtpPage> {
                   height: 120,
                 ),
                 Text(
-                  'Enter the OTP',
+                  'Enter your last name',
                   style: TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
@@ -57,10 +57,10 @@ class _OtpPageState extends State<OtpPage> {
                   ),
                 ),
                 TextFormField(
-                  keyboardType: TextInputType.number,
+                  keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
-                    labelText: 'SMS verification code',
+                    labelText: 'Write your last name here',
                   ),
                 ),
                 const SizedBox(
@@ -73,35 +73,13 @@ class _OtpPageState extends State<OtpPage> {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => OtpPage()),
-                        );
-                      },
-                      color: Color.fromARGB(255, 254, 254, 254),
-                      textColor: Color.fromARGB(255, 33, 33, 40),
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 12, horizontal: 57.5),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: const Text(
-                        'Resend',
-                        style: TextStyle(fontSize: 14),
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 10,
-                    ),
-                    MaterialButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => EmailPage()),
+                          MaterialPageRoute(builder: (context) => DOBPage()),
                         );
                       },
                       color: Color.fromARGB(255, 33, 33, 40),
                       textColor: Colors.white,
                       padding: const EdgeInsets.symmetric(
-                          vertical: 12, horizontal: 62.5),
+                          vertical: 12, horizontal: 150.5),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),

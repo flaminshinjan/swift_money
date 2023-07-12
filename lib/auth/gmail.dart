@@ -1,6 +1,4 @@
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter/material.dart';
-import 'package:swift_money/auth/gmail.dart';
 import 'package:swift_money/auth/otp.dart';
 
 final TextEditingController _controller = TextEditingController();

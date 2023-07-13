@@ -7,22 +7,7 @@ class InvestExperience2Page extends StatefulWidget {
 }
 
 class _InvestExperience2PageState extends State<InvestExperience2Page> {
-  late String selectedOption;
-
-  final List<String> experienceLevels = [
-    "<₹50,000 a month",
-    '₹50K to ₹1.5L a month',
-    '₹1.5L to ₹2.5L a month',
-    '₹2.5L to ₹3.5L a month',
-    '>₹3.5L a month',
-  ];
-
-  @override
-  void initState() {
-    super.initState();
-    selectedOption = experienceLevels.first;
-  }
-
+  double _value = 50000;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,37 +41,51 @@ class _InvestExperience2PageState extends State<InvestExperience2Page> {
                         color: Colors.black))
               ],
             ),
-            const SizedBox(
-              height: 30,
-            ),
             Expanded(
-              child: ListView.builder(
-                itemCount: experienceLevels.length,
-                itemBuilder: (context, index) {
-                  final level = experienceLevels[index];
-                  return Card(
-                    color: level == selectedOption
-                        ? Color.fromARGB(255, 33, 33, 40)
-                        : Colors.white,
-                    child: ListTile(
-                      title: Text(
-                        level,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: level == selectedOption
-                              ? Colors.white
-                              : Color.fromARGB(255, 33, 33, 40),
-                        ),
-                      ),
-                      onTap: () {
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text('₹50,000'),
+                        Text('₹400,000'),
+                      ],
+                    ),
+                  ),
+                  SliderTheme(
+                    data: SliderTheme.of(context).copyWith(
+                      activeTrackColor: Colors.black,
+                      inactiveTrackColor: Colors.black.withOpacity(0.5),
+                      thumbColor: Colors.black,
+                      overlayColor: Colors.black.withAlpha(32),
+                      valueIndicatorColor: Colors.black,
+                      thumbShape:
+                          RoundSliderThumbShape(enabledThumbRadius: 10.0),
+                      overlayShape:
+                          RoundSliderOverlayShape(overlayRadius: 20.0),
+                    ),
+                    child: Slider(
+                      value: _value,
+                      min: 50000,
+                      max: 400000,
+                      onChanged: (newValue) {
                         setState(() {
-                          selectedOption = level;
+                          _value = newValue;
                         });
                       },
                     ),
-                  );
-                },
+                  ),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Text(
+                      'In-hand income: ₹${_value.toInt()}',
+                      style: TextStyle(fontSize: 16.0),
+                    ),
+                  ),
+                ],
               ),
             ),
             Padding(

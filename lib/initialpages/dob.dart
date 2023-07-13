@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:swift_money/investinfo/inv.dart';
+import 'package:swift_money/investinfo/inv1.dart';
 
 class DOBPage extends StatefulWidget {
   const DOBPage({super.key});
@@ -93,7 +95,13 @@ class _DOBPageState extends State<DOBPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InvestExperiencePage()),
+                        );
+                      },
                       color: Color.fromARGB(255, 33, 33, 40),
                       textColor: Colors.white,
                       padding: const EdgeInsets.symmetric(

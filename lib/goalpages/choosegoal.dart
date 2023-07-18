@@ -13,7 +13,10 @@ class _ChooseGoalPageState extends State<ChooseGoalPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: CustomAppBar(
+        text: "Hello Preeti,",
+        showIcon: false,
+      ),
       body: Container(
         alignment: Alignment.center,
         child: Column(

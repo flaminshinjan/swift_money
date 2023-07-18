@@ -41,7 +41,7 @@ class _InvestExperience1PageState extends State<InvestExperience1Page> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Column(
+            const Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(

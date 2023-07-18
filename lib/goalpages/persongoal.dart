@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/components/investcards.dart';
+import 'package:swift_money/goalpages/timeline.dart';
 
 class SeperateGoalSelector extends StatefulWidget {
   const SeperateGoalSelector({super.key});
@@ -53,13 +54,20 @@ class _SeperateGoalSelectorState extends State<SeperateGoalSelector> {
                     Padding(
                       padding: const EdgeInsets.all(14.25),
                       child: InvestCard(
-                          height: 111,
-                          width: 159,
-                          text: "My Vacation",
-                          imagePath: 'assets/coins.png',
-                          borderColor: Color.fromARGB(255, 40, 148, 235),
-                          textColor: Color.fromARGB(255, 13, 51, 82),
-                          color: Color.fromARGB(76, 41, 198, 226)),
+                        height: 111,
+                        width: 159,
+                        text: "My Vacation",
+                        imagePath: 'assets/coins.png',
+                        borderColor: Color.fromARGB(255, 40, 148, 235),
+                        textColor: Color.fromARGB(255, 13, 51, 82),
+                        color: Color.fromARGB(76, 41, 198, 226),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => Timeline()),
+                          );
+                        },
+                      ),
                     ),
                     Padding(
                       padding: const EdgeInsets.all(14.25),

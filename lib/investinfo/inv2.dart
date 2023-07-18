@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:swift_money/goalpages/choosegoal.dart';
 import 'package:swift_money/investinfo/inv1.dart';
 
 class InvestExperience2Page extends StatefulWidget {
@@ -94,8 +95,7 @@ class _InvestExperience2PageState extends State<InvestExperience2Page> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(
-                        builder: (context) => InvestExperience1Page()),
+                    MaterialPageRoute(builder: (context) => ChooseGoalPage()),
                   );
                 },
                 color: Color.fromARGB(255, 33, 33, 40),

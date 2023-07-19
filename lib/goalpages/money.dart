@@ -3,6 +3,7 @@ import 'package:swift_money/components/appbar.dart';
 import 'package:swift_money/components/textfield.dart';
 import 'package:swift_money/components/nextpage.dart';
 import 'package:swift_money/goalpages/timeline.dart';
+import 'package:swift_money/invfinal/invbasket.dart';
 
 class MoneySelector extends StatefulWidget {
   const MoneySelector({super.key});
@@ -59,7 +60,7 @@ class _MoneySelectorState extends State<MoneySelector> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MoneySelector()),
+                  MaterialPageRoute(builder: (context) => Inv1Page()),
                 );
               },
               color: Color.fromARGB(255, 33, 33, 40),

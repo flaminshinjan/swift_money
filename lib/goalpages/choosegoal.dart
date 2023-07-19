@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/components/appbar.dart';
 import 'package:swift_money/goalpages/persongoal.dart';
+import 'package:swift_money/goalpages/timeline.dart';
 
 class ChooseGoalPage extends StatefulWidget {
   const ChooseGoalPage({super.key});
@@ -60,7 +61,7 @@ class _ChooseGoalPageState extends State<ChooseGoalPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ChooseGoalPage()),
+                  MaterialPageRoute(builder: (context) => Timeline()),
                 );
               },
               color: Color.fromARGB(255, 215, 243, 218),

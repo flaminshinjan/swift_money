@@ -4,6 +4,7 @@ import 'package:swift_money/auth/otp.dart';
 import 'package:swift_money/initialpages/onbp.dart';
 import 'package:swift_money/initialpages/splash.dart';
 import 'package:swift_money/invfinal/plan.dart';
+import 'package:swift_money/invfinal/goalstatus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         '/otp': (context) => OtpPage(),
         '/onbp': (context) => OnboardingPage1(),
         '/plan': (context) => PlanPage(),
+        '/gstatus': (context) => GoalStatus(),
       },
     );
   }

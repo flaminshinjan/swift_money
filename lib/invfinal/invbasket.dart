@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/components/swipebutton.dart';
 
-
 class Inv1Page extends StatefulWidget {
   const Inv1Page({super.key});
 
@@ -17,7 +16,7 @@ class _Inv1PageState extends State<Inv1Page> {
         toolbarHeight: 60,
         automaticallyImplyLeading: false,
         backgroundColor: Color.fromARGB(255, 33, 33, 40),
-        title: Row(
+        title: const Row(
           children: [
             CircleAvatar(
               radius: 20,
@@ -59,7 +58,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 width: 400,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(
+                    side: const BorderSide(
                         width: 1, color: Color.fromARGB(255, 198, 202, 205)),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -67,7 +66,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(
+                    const Padding(
                       padding: const EdgeInsets.only(
                           left: 15.0, top: 10.0, bottom: 5.0),
                       child: Text(
@@ -88,7 +87,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 ),
               ),
             ),
-            Padding(
+            const Padding(
               padding:
                   const EdgeInsets.only(left: 15.0, top: 10.0, bottom: 5.0),
               child: Text(
@@ -110,7 +109,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 width: 400,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
-                    side: BorderSide(
+                    side: const BorderSide(
                         width: 1, color: Color.fromARGB(255, 198, 202, 205)),
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -123,7 +122,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 ),
               ),
             ),
-            SizedBox(height: 80),
+            const SizedBox(height: 80),
             SwipeableButton(),
           ],
         ),

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:swift_money/components/appbar.dart';
 import 'package:swift_money/goalpages/persongoal.dart';
 import 'package:swift_money/invfinal/brokerselector.dart';
+import 'package:swift_money/invfinal/goalstatus.dart';
+import 'package:swift_money/invfinal/portfolio.dart';
 
 class PlanPage extends StatefulWidget {
   const PlanPage({super.key});
@@ -78,7 +80,7 @@ class _PlanPageState extends State<PlanPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => BrokerSelector()),
+                  MaterialPageRoute(builder: (context) => GoalStatus()),
                 );
               },
               color: Color.fromARGB(255, 215, 243, 218),

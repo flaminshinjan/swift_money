@@ -26,7 +26,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   height: 50,
                 ),
                 onPressed: () {
-                  // Add any action you want when the icon is pressed.
+                  Navigator.pop(context);
                 },
               ),
             ),

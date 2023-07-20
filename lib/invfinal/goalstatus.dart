@@ -172,7 +172,9 @@ class _GoalStatusState extends State<GoalStatus> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, '/profile');
+          },
           child: Icon(
             Icons.person,
             color: Colors.white,

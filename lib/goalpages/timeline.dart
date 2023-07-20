@@ -18,6 +18,7 @@ class _TimelineState extends State<Timeline> {
       appBar: CustomAppBar(text: "Let's make a timeline!"),
       body: Container(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
               padding: const EdgeInsets.all(20.0),
@@ -29,50 +30,54 @@ class _TimelineState extends State<Timeline> {
                 ),
               ),
             ),
-            CustomTextField(
-              hintText: "Enter Months/Years",
-              textStyle: TextStyle(
-                fontSize: 20.0,
-                color: Colors.black,
-                fontWeight: FontWeight.bold,
-              ),
-              borderColor: Colors.black,
-            ),
-            Text("Or",
-                style: TextStyle(
-                    fontSize: 20,
+            Column(
+              children: [
+                CustomTextField(
+                  hintText: "Enter Months/Years",
+                  textStyle: TextStyle(
+                    fontSize: 20.0,
                     color: Colors.black,
-                    fontWeight: FontWeight.bold)),
-            CustomInkWellButton(
-              text: "I'm not sure about time.",
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => Timeline()),
-                );
-              },
-            ),
-            SizedBox(
-              height: 240,
-            ),
-            MaterialButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => MoneySelector()),
-                );
-              },
-              color: Color.fromARGB(255, 33, 33, 40),
-              textColor: Colors.white,
-              padding:
-                  const EdgeInsets.symmetric(vertical: 12, horizontal: 160.5),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
-              child: const Text(
-                'Next',
-                style: TextStyle(fontSize: 14),
-              ),
+                    fontWeight: FontWeight.bold,
+                  ),
+                  borderColor: Colors.black,
+                ),
+                Text("Or",
+                    style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold)),
+                CustomInkWellButton(
+                  text: "I'm not sure about time.",
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Timeline()),
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: 240,
+                ),
+                MaterialButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MoneySelector()),
+                    );
+                  },
+                  color: Color.fromARGB(255, 33, 33, 40),
+                  textColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(
+                      vertical: 12, horizontal: 160.5),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: const Text(
+                    'Next',
+                    style: TextStyle(fontSize: 14),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

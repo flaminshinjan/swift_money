@@ -14,14 +14,17 @@ class CustomInkWellButton extends StatelessWidget {
         onTap: onTap,
         child: Container(
           decoration: BoxDecoration(
-            border: Border.all(color: Colors.black, width: 1.0),
+            border: Border.all(
+                color: const Color.fromARGB(96, 0, 0, 0), width: 1.0),
             borderRadius: BorderRadius.circular(8.0),
           ),
-          padding: EdgeInsets.symmetric(horizontal: 62.5, vertical: 14.0),
+          padding: EdgeInsets.symmetric(horizontal: 62, vertical: 12.0),
           child: Text(
             text,
+            textAlign: TextAlign.start,
             style: TextStyle(
               fontSize: 18.0,
+              color: Color.fromARGB(95, 0, 0, 0),
               fontWeight: FontWeight.bold,
             ),
           ),

@@ -57,7 +57,11 @@ class _PortfolioPageState extends State<PortfolioPage> {
           SliverList(
             delegate: SliverChildListDelegate([
               Center(
-                child: PortfolioCard(),
+                child: Column(
+                  children: [
+                    PortfolioCard(),
+                  ],
+                ),
               ),
               SizedBox(height: 200.0), // Just for some content below the card
             ]),

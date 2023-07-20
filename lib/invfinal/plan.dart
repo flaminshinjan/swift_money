@@ -80,7 +80,7 @@ class _PlanPageState extends State<PlanPage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => GoalStatus()),
+                  MaterialPageRoute(builder: (context) => PortfolioPage()),
                 );
               },
               color: Color.fromARGB(255, 215, 243, 218),

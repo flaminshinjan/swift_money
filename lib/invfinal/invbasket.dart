@@ -105,7 +105,7 @@ class _Inv1PageState extends State<Inv1Page> {
                 right: 10.0,
               ),
               child: Container(
-                height: 250,
+                height: 300,
                 width: 400,
                 decoration: ShapeDecoration(
                   shape: RoundedRectangleBorder(
@@ -122,8 +122,11 @@ class _Inv1PageState extends State<Inv1Page> {
                 ),
               ),
             ),
-            const SizedBox(height: 80),
-            SwipeableButton(),
+            const SizedBox(height: 30),
+            Container(
+              color: Color.fromARGB(255, 201, 231, 212),
+              child: SwipeableButton(),
+            ),
           ],
         ),
       ),

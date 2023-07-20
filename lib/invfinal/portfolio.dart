@@ -19,24 +19,27 @@ class _PortfolioPageState extends State<PortfolioPage> {
             backgroundColor: Color.fromARGB(255, 33, 33, 40),
             expandedHeight: 100.0,
             flexibleSpace: const FlexibleSpaceBar(
-              title: Row(
-                children: [
-                  CircleAvatar(
-                    radius: 20,
-                    backgroundImage: AssetImage('assets/profile.png'),
-                  ),
-                  Padding(
-                    padding: EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      'Hello Preeti 👋',
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+              title: Padding(
+                padding: EdgeInsets.only(left: 8.0),
+                child: Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 20,
+                      backgroundImage: AssetImage('assets/profile.png'),
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: 8.0),
+                      child: Text(
+                        'Hello Preeti 👋',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             actions: [

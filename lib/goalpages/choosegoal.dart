@@ -57,6 +57,16 @@ class _ChooseGoalPageState extends State<ChooseGoalPage> {
             SizedBox(
               height: 20,
             ),
+            Text(
+              "Or",
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
             MaterialButton(
               onPressed: () {
                 Navigator.push(

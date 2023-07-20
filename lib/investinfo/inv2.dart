@@ -51,7 +51,7 @@ class _InvestExperience2PageState extends State<InvestExperience2Page> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('₹50,000'),
+                        Text('₹20,000'),
                         Text('₹400,000'),
                       ],
                     ),
@@ -70,7 +70,7 @@ class _InvestExperience2PageState extends State<InvestExperience2Page> {
                     ),
                     child: Slider(
                       value: _value,
-                      min: 50000,
+                      min: 20000,
                       max: 400000,
                       onChanged: (newValue) {
                         setState(() {

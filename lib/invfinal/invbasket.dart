@@ -14,7 +14,6 @@ class _Inv1PageState extends State<Inv1Page> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 60,
-        automaticallyImplyLeading: false,
         backgroundColor: Color.fromARGB(255, 33, 33, 40),
         title: const Row(
           children: [

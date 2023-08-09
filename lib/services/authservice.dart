@@ -9,7 +9,7 @@ class AuthService {
 
   Future<void> register(UserCredentials registrationData) async {
     final response = await http.post(
-      Uri.parse(ApiConstants.registerEndpoint), // Replace with your actual registration endpoint
+      Uri.parse(ApiConstants.registrationEndpoint),
       headers: {'Content-Type': 'application/json'},
       body: json.encode(registrationData.toJson()),
     );

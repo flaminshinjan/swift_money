@@ -1,18 +1,18 @@
 // user_credentials.dart
 class UserCredentials {
-  final String firstname;
-  final String lastname;
+  final String firstName;
+  final String lastName;
   final String password;
   final String email;
   final String phone;
   final String dob;
 
-  UserCredentials({required this.dob,required this.firstname,required this.lastname,required this.email, required this.password, required this.phone});
+  UserCredentials({required this.dob,required this.firstName,required this.lastName,required this.email, required this.password, required this.phone});
 
   Map<String, dynamic> toJson() {
     return {
-      'firstname': firstname,
-      'lastname': lastname,
+      'firstName': firstName,
+      'lastName': lastName,
       'password': password,
       'email': email,
       'phone': phone,

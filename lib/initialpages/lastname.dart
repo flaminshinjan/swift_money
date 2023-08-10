@@ -1,14 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/initialpages/dob.dart';
+import 'package:swift_money/models/auth_credentials.dart';
 
 class LNPage extends StatefulWidget {
-  const LNPage({super.key});
+  const LNPage({super.key, required String firstName});
 
   @override
   State<LNPage> createState() => _LNPageState();
 }
 
 class _LNPageState extends State<LNPage> {
+  TextEditingController _lastNameController = TextEditingController();
+  void _navigateToNextScreen() {
+    // Save the first name and navigate to the next screen
+    String lastName = _lastNameController.text;
+    print('Collected Last Name: $lastName');
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => DOBPage(lastName: lastName),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +72,7 @@ class _LNPageState extends State<LNPage> {
                   ),
                 ),
                 TextFormField(
+                  controller: _lastNameController,
                   keyboardType: TextInputType.name,
                   decoration: InputDecoration(
                     labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
@@ -70,12 +86,7 @@ class _LNPageState extends State<LNPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MaterialButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => DOBPage()),
-                        );
-                      },
+                      onPressed: _navigateToNextScreen,
                       color: Color.fromARGB(255, 33, 33, 40),
                       textColor: Colors.white,
                       padding: const EdgeInsets.symmetric(

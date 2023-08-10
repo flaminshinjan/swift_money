@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:swift_money/initialpages/lastname.dart';
+import 'package:swift_money/models/auth_credentials.dart';
 
 class FNPage extends StatefulWidget {
   const FNPage({super.key});
@@ -9,6 +10,20 @@ class FNPage extends StatefulWidget {
 }
 
 class _FNPageState extends State<FNPage> {
+  TextEditingController _firstNameController = TextEditingController();
+  void _navigateToNextScreen() {
+    // Save the first name and navigate to the next screen
+    String firstName = _firstNameController.text;
+    print('Collected First Name: $firstName');
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => LNPage(firstName: firstName),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,6 +72,7 @@ class _FNPageState extends State<FNPage> {
                   ),
                 ),
                 TextFormField(
+                  controller: _firstNameController,
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     labelStyle: TextStyle(color: Colors.grey, fontSize: 15),
@@ -70,12 +86,7 @@ class _FNPageState extends State<FNPage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     MaterialButton(
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => LNPage()),
-                        );
-                      },
+                      onPressed: _navigateToNextScreen,
                       color: Color.fromARGB(255, 33, 33, 40),
                       textColor: Colors.white,
                       padding: const EdgeInsets.symmetric(

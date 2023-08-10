@@ -4,7 +4,7 @@ import 'package:swift_money/investinfo/inv.dart';
 import 'package:swift_money/investinfo/inv1.dart';
 
 class DOBPage extends StatefulWidget {
-  const DOBPage({super.key});
+  const DOBPage({super.key, required String lastName});
 
   @override
   State<DOBPage> createState() => _DOBPageState();
@@ -12,6 +12,7 @@ class DOBPage extends StatefulWidget {
 
 class _DOBPageState extends State<DOBPage> {
   TextEditingController dateInput = TextEditingController();
+
   @override
   void initState() {
     dateInput.text = "";
